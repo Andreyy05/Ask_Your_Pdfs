@@ -166,8 +166,8 @@ with st.sidebar:
 
     st.markdown("---")
     st.markdown("### 🔄 Maintenance")
-    if st.button("Re-Index All PDFs from /data", use_container_width=True):
-        with st.spinner("Processing all documents in data/..."):
+    if st.button("Re-Index All PDFs from /pdfs", use_container_width=True):
+        with st.spinner("Processing all documents in pdfs/..."):
             stats = ingest_folder(data_dir=DEFAULT_DATA_DIR, chroma_dir=DEFAULT_CHROMA_DIR, reset=True)
             st.success(f"Indexed {stats['files']} PDFs, {stats['chunks']} total chunks.")
             time.sleep(1)

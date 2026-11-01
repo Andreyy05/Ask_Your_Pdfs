@@ -18,7 +18,7 @@ An end-to-end Retrieval-Augmented Generation (RAG) Python application that inges
 
 ```text
                                   INGESTION PIPELINE
-[PDF Documents in /data] ──> [pypdf Page Extraction] ──> [Boundary Chunker (800c/150o)]
+[PDF Documents in /pdfs] ──> [pypdf Page Extraction] ──> [Boundary Chunker (800c/150o)]
                                                                   │
                                                         [Metadata: filename, p. N]
                                                                   │
@@ -48,7 +48,7 @@ An end-to-end Retrieval-Augmented Generation (RAG) Python application that inges
 
 ```text
 Ask_Your_Pdfs/
-├── data/                                    # Sample PDF research papers (4 foundational papers)
+├── pdfs/                                    # Sample PDF research papers (4 foundational papers)
 │   ├── attention_is_all_you_need.pdf        # Vaswani et al. (15 pages)
 │   ├── flash_attention.pdf                  # Dao et al. (34 pages)
 │   ├── lora_low_rank_adaptation.pdf         # Hu et al. (26 pages)
@@ -119,7 +119,7 @@ OLLAMA_MODEL=llama3.2
 
 ## 📥 Ingestion Pipeline
 
-To process all PDFs in the `data/` directory and build the ChromaDB vector database:
+To process all PDFs in the `pdfs/` directory and build the ChromaDB vector database:
 
 ```bash
 python ingest.py
@@ -267,7 +267,7 @@ The knowledge base comes pre-populated with 4 seminal papers. Below are sample e
 ## 📜 Deliverables Checklist
 
 - [x] **Git Repository**: Initialized with clean commit history, `.gitignore`, and 4 curated sample PDFs.
-- [x] **Sample PDFs**: 4 seminal machine learning papers in `data/` (Attention, LoRA, RAG, FlashAttention).
+- [x] **Sample PDFs**: 4 seminal machine learning papers in `pdfs/` (Attention, LoRA, RAG, FlashAttention).
 - [x] **Ingestion Pipeline** (`ingest.py`): Page-level chunking with metadata storage (`filename`, `page`, `chunk_index`).
 - [x] **Query CLI** (`query.py`): Top-$k$ semantic search with single-shot and interactive REPL mode.
 - [x] **Web UI** (`app.py`): Streamlit application with chat interface, citation badges, source inspector, and drag-and-drop PDF ingestion.

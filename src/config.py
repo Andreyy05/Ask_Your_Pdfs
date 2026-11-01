@@ -7,7 +7,7 @@ load_dotenv()
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
-DEFAULT_DATA_DIR = PROJECT_ROOT / "data"
+DEFAULT_DATA_DIR = PROJECT_ROOT / "pdfs"
 DEFAULT_CHROMA_DIR = PROJECT_ROOT / "chroma_db"
 COLLECTION_NAME = "ask_your_pdfs"
 
