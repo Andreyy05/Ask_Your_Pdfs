@@ -1,4 +1,4 @@
-# 📚 Homework 2 — Ask-Your-PDFs (RAG)
+Ask-Your-PDFs (RAG)
 
 An end-to-end Retrieval-Augmented Generation (RAG) Python application that ingests a corpus of research papers/PDFs, performs semantic retrieval over vector embeddings, and generates answers with **strict page-level citations** in the format `[filename, p. N]`.
 
