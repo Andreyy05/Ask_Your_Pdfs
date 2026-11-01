@@ -276,3 +276,10 @@ The knowledge base comes pre-populated with 4 seminal papers. Below are sample e
 - [x] **Test Suite** (`tests/`): Automated tests for chunking, overlap, and citation parsing.
 - [x] **Comprehensive README**: Setup instructions, architecture diagram, usage guides, and benchmark evaluation questions.
 
+---
+
+## 👥 Author & Contributor
+
+- **Andrej Pavliščak** ([@Andreyy05](https://github.com/Andreyy05))
+
+
