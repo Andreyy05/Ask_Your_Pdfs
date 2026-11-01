@@ -1,26 +1,77 @@
-# Virtual environments
+# ==============================================================================
+# SECRETS, CREDENTIALS & API KEYS (Never leak to Git)
+# ==============================================================================
+.env
+.env.*
+!.env.example
+*.env
+*.key
+*.pem
+*.crt
+*.cer
+*.p12
+*.pfx
+*.token
+*token*.json
+credentials.json
+client_secret*.json
+service_account*.json
+*api_key*
+*apikey*
+auth.json
+secrets/
+.secrets/
+
+# Cloud CLI credentials
+.aws/
+.gcp/
+.azure/
+
+# ==============================================================================
+# VIRTUAL ENVIRONMENTS
+# ==============================================================================
 .venv/
 venv/
 ENV/
 env/
+env.bak/
+venv.bak/
 
-# Python cache
+# ==============================================================================
+# PYTHON CACHE & BYTECODE
+# ==============================================================================
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
 
-# Chroma DB vector database
+# ==============================================================================
+# VECTOR DATABASE & DATA STORES
+# ==============================================================================
 chroma_db/
 *.chroma
+*.sqlite3
 
-# Environment variables
-.env
+# ==============================================================================
+# LOGS & TEMPORARY FILES
+# ==============================================================================
+*.log
+logs/
+*.tmp
+*.temp
 
-# OS / Editor files
+# ==============================================================================
+# OS & IDE METADATA
+# ==============================================================================
 .DS_Store
 Thumbs.db
+ehthumbs.db
 .vscode/
 .idea/
-
+*.sublime-project
+*.sublime-workspace
